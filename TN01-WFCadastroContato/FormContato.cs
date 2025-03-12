@@ -38,9 +38,6 @@ namespace TN01_WFCadastroContato
                 return;
             }
 
-
-
-
             string message = $"nome completo:{nomeCompleto} \n sobreNome: {sobreNome} \n telefone: {phone} \n tipo de telefone: {tipoTelefone} \n email: {email}";
 
 
@@ -52,11 +49,7 @@ namespace TN01_WFCadastroContato
 
              MessageBox.Show(message);
             }
-
- 
-
         }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
