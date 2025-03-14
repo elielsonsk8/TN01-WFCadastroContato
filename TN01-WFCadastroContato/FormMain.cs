@@ -28,6 +28,10 @@ namespace TN01_WFCadastroContato
             form.ShowDialog();
         }
 
-       
+        private void mnsListagem_Click(object sender, EventArgs e)
+        {
+            FormListagem form = new FormListagem();
+            form.ShowDialog();
+        }
     }
 }

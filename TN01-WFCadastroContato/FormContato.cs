@@ -17,43 +17,116 @@ namespace TN01_WFCadastroContato
             InitializeComponent();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        public void Erro(string mensagem)
         {
-            string nomeCompleto = txtNomeCompleto.Text;
-            string sobreNome = txtSobreNome.Text;
-            string phone = mkdTelefone.Text;
-            string tipoTelefone = "";
-            string email = txtEmail.Text;
-
-            if (rdbComercial.Checked == true) {
-                tipoTelefone = "Comercial";
-            } else if (rdbPessoal.Checked == true) {
-                tipoTelefone = "Pessoal";
-            } else if (rdbRecado.Checked == true)
-            {
-                tipoTelefone = "Recado";
-            } else
-            {
-                MessageBox.Show("Erro!");
-                return;
-            }
-
-            string message = $"nome completo:{nomeCompleto} \n sobreNome: {sobreNome} \n telefone: {phone} \n tipo de telefone: {tipoTelefone} \n email: {email}";
-
-
-            if (nomeCompleto == "" || sobreNome == "" || phone == "" || tipoTelefone == "" || email == "")
-            {
-                MessageBox.Show("Preencha todos os campos");
-            } else
-            {
-
-             MessageBox.Show(message);
-            }
+            MessageBox.Show(mensagem, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        public void Sucesso(string mensagem)
+        {
+            MessageBox.Show(mensagem, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void LimparFormulario()
+        {
+            txtNomeCompleto.Clear();
+            txtSobreNome.Clear();
+            txtEmail.Clear();
+            mkdTelefone.Clear();
+            rdbComercial.Checked = false;
+            rdbPessoal.Checked = false;
+            rdbRecado.Checked = false;
+        }
+
+
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+        }
+
+        private void btnSalvar_Click_1(object sender, EventArgs e)
+        {
+            //Não usei o Exclude Prompt Literals
+            string semMaskTelefone = mkdTelefone.Text
+                .Replace("(", "")
+                .Replace(")", "")
+                .Replace(" ", "")
+                .Replace("-", "");
+
+            //Verifica Nome Vazio
+            if (string.IsNullOrEmpty(txtNomeCompleto.Text))
+            {
+                Erro("Campo Nome não pode estar Vazio!");
+                return;
+            }
+            //Verifica SobreNome Vazio
+            else if (string.IsNullOrEmpty(txtSobreNome.Text))
+            {
+                Erro("Campo Sobrenome não pode estar Vazio!");
+                return;
+            }
+            //Verifica DDD e o Telefone Vazios
+            else if (string.IsNullOrEmpty(semMaskTelefone))
+            {
+                Erro("Campo Telefone não pode estar Vazio!");
+                return;
+            }
+            //Verifica Email Vazios
+            else if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                Erro("Campo Email não pode estar Vazio!");
+                return;
+            }
+
+            ETipoTelefone tipoTelefone;
+            //Se todos os radios estão desmarcados
+            if (!rdbComercial.Checked && !rdbPessoal.Checked && !rdbRecado.Checked)
+            {
+                Erro("Deve-se marcar uma opção de Tipo de Telefone!");
+                return;
+            }
+            else
+            {
+                if (rdbComercial.Checked)
+                    tipoTelefone = ETipoTelefone.Comercial;
+                else if (rdbPessoal.Checked)
+                    tipoTelefone = ETipoTelefone.Pessoal;
+                else
+                    tipoTelefone = ETipoTelefone.Recado;
+            }
+
+            Contato c1 = new Contato();
+            c1.Codigo = 0;
+            c1.Nome = txtNomeCompleto.Text;
+            c1.Sobrenome = txtSobreNome.Text;
+            c1.Email = txtEmail.Text;
+            c1.TipoTelefone = tipoTelefone;
+
+            // Usou a Propriedade (Exclude Prompt Literals)
+            //1 1 9 8 7 6 5 4 3 2 1  //Caracteres
+            //0 1 2 3 4 5 6 7 8 9 10 //Index(posição)
+
+            c1.Ddd = mkdTelefone.Text.Substring(0, 2);
+            c1.Telefone = mkdTelefone.Text.Substring(2);
+
+            // Não Usou a Propriedade (Exclude Prompt Literals)
+            // E limpou os caracteres com o .Replace()
+            //1 1 9 8 7 6 5 4 3 2 1  //Caracteres
+            //0 1 2 3 4 5 6 7 8 9 10 //Index(posição)
+            c1.Ddd = semMaskTelefone.Substring(0, 2);
+            c1.Telefone = semMaskTelefone.Substring(2);
+
+            Contato.ListaContatos.Add(c1);
+
+            Sucesso("Cadastrado com Sucesso!");
+
+            LimparFormulario();
+        }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

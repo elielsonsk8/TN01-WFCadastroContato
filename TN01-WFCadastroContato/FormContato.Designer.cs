@@ -37,14 +37,14 @@
             mkdTelefone = new MaskedTextBox();
             lblTelefone = new Label();
             gbxTelefone = new GroupBox();
+            rdbRecado = new RadioButton();
+            rdbComercial = new RadioButton();
+            rdbPessoal = new RadioButton();
             label1 = new Label();
             txtEmail = new TextBox();
             lblEmail = new Label();
             btnSalvar = new Button();
             btnVoltar = new Button();
-            rdbPessoal = new RadioButton();
-            rdbComercial = new RadioButton();
-            rdbRecado = new RadioButton();
             gbxTelefone.SuspendLayout();
             SuspendLayout();
             // 
@@ -117,6 +117,39 @@
             gbxTelefone.TabStop = false;
             gbxTelefone.Text = "Tipo de telefone:";
             // 
+            // rdbRecado
+            // 
+            rdbRecado.AutoSize = true;
+            rdbRecado.Location = new Point(166, 24);
+            rdbRecado.Name = "rdbRecado";
+            rdbRecado.Size = new Size(64, 19);
+            rdbRecado.TabIndex = 2;
+            rdbRecado.TabStop = true;
+            rdbRecado.Text = "Recado";
+            rdbRecado.UseVisualStyleBackColor = true;
+            // 
+            // rdbComercial
+            // 
+            rdbComercial.AutoSize = true;
+            rdbComercial.Location = new Point(81, 22);
+            rdbComercial.Name = "rdbComercial";
+            rdbComercial.Size = new Size(79, 19);
+            rdbComercial.TabIndex = 1;
+            rdbComercial.TabStop = true;
+            rdbComercial.Text = "Comercial";
+            rdbComercial.UseVisualStyleBackColor = true;
+            // 
+            // rdbPessoal
+            // 
+            rdbPessoal.AutoSize = true;
+            rdbPessoal.Location = new Point(11, 24);
+            rdbPessoal.Name = "rdbPessoal";
+            rdbPessoal.Size = new Size(64, 19);
+            rdbPessoal.TabIndex = 0;
+            rdbPessoal.TabStop = true;
+            rdbPessoal.Text = "Pessoal";
+            rdbPessoal.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             label1.BorderStyle = BorderStyle.FixedSingle;
@@ -151,7 +184,7 @@
             btnSalvar.TabIndex = 19;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += btnSalvar_Click;
+            btnSalvar.Click += btnSalvar_Click_1;
             // 
             // btnVoltar
             // 
@@ -163,40 +196,7 @@
             btnVoltar.TabIndex = 20;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
-            btnVoltar.Click += btnVoltar_Click;
-            // 
-            // rdbPessoal
-            // 
-            rdbPessoal.AutoSize = true;
-            rdbPessoal.Location = new Point(11, 24);
-            rdbPessoal.Name = "rdbPessoal";
-            rdbPessoal.Size = new Size(64, 19);
-            rdbPessoal.TabIndex = 0;
-            rdbPessoal.TabStop = true;
-            rdbPessoal.Text = "Pessoal";
-            rdbPessoal.UseVisualStyleBackColor = true;
-            // 
-            // rdbComercial
-            // 
-            rdbComercial.AutoSize = true;
-            rdbComercial.Location = new Point(81, 22);
-            rdbComercial.Name = "rdbComercial";
-            rdbComercial.Size = new Size(79, 19);
-            rdbComercial.TabIndex = 1;
-            rdbComercial.TabStop = true;
-            rdbComercial.Text = "Comercial";
-            rdbComercial.UseVisualStyleBackColor = true;
-            // 
-            // rdbRecado
-            // 
-            rdbRecado.AutoSize = true;
-            rdbRecado.Location = new Point(166, 24);
-            rdbRecado.Name = "rdbRecado";
-            rdbRecado.Size = new Size(64, 19);
-            rdbRecado.TabIndex = 2;
-            rdbRecado.TabStop = true;
-            rdbRecado.Text = "Recado";
-            rdbRecado.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click_1;
             // 
             // FormContato
             // 

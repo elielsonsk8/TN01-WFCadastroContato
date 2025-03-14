@@ -117,31 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSalvar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEbSURBVFhH7ZdB
-        CsIwFES78gYiXkV0rydT76YbRXCt6DV0RvghNt9kCC0q9MEs8p1MBrElNr/CCNpCd+jRsfbQBMqygbzN
-        XekEZUvcIBpnr5WPhZWIfWPoCHGdLaGEKx7S9rHEAeLsDE2hBCVc8RDPVyyhhCse8smXLaGEKx6S88W/
-        iR0HhhKueEjJxxKJp7SJXCHzlXSBcpgvkAwcVpBSgocvoRzmDSSDnhkKDAWGAv9RoItbEu8ZvOwwK8Y+
-        DyQD0OUtiVkxNg8kA6DckkrMIWYwKyY5LxkAb1aDlC2ZKpGyJVMlUrZkqkTKlkyVSNmSqRIp2x45PjaG
-        t7GGds4C4vrt0ez7r5mnNRTgq5Il7JvoUzzDez1/g6Z5AjHcRIXfP2F6AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnVoltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIRSURBVFhHtddP
-        SxVRGMfxUxatBKkWIYW0isCVFBFEm1ZWBEIvQCMiBHHjJnARtSlJcBPpqrDaiqmBJBVtg/YFvYEIoXRh
-        av++v+EeOY7PzJy599wffLhw7vkzd+bMc2dczRzEBQzjEWYaHuAWzqIDyXMGs1jHvwqreILTaDk90MJ/
-        YS1W5g80thtNZQi/YE1ex09cRXR0DXVNrcmapTN4F1GZgjVJCmMozSCsgaloXxRejl5swhqY0g8cw54s
-        wRrQDrpNd+UirI5FvmIUH4K2OrZxCjt5Bauj5TP8vX0cVp8Yj5GlC1uwOuWFiyutbNrv2A93rdFQJb+4
-        dnOrm7YPWYGwvgx9Qbh4PzZg9a3jJrJ6bX3p5X/5SbzGSoV3WIM1p6eKW7oBVUK1YLO5BGtebxpuMWjI
-        U+Uyi0ZkzsOa19OzhHsZNFg+QneKzwmokPiHkSJP8Q3WnN4E3P2gocgnHIaP/qp1dqy+ddyGux40lMmf
-        iRto9SB0idxR/G40VMkfxAisfjH0oHIAWd7A6mQJD0KfVp8Y2iM7UVWzOhXRnlAFfRa01aFLl1XBMG9h
-        dW6HF9iTc0ixs6uohBcWtzuwBqWku6cw+6DTYw1M4SEqcwjtOIhJZP//sdEjV4o9oZeb0tNeFr1svoc1
-        cYx5JHlHvIxlxFRMPSXNQW/RyXMEA7gH/YsuQL/yOcZxBZ2IjHP/AaMBsSrrNRrCAAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>
