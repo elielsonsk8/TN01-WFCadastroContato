@@ -1,6 +1,6 @@
-﻿namespace WFAcesso
+﻿namespace WFUsandoListagem
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,77 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtUsusarioLogin = new TextBox();
-            txtSenhaLogin = new TextBox();
-            lblUsuario = new Label();
+            lblLogin = new Label();
+            txtLogin = new TextBox();
+            txtSenha = new TextBox();
             lblSenha = new Label();
             btnLogar = new Button();
             SuspendLayout();
             // 
-            // txtUsusarioLogin
+            // lblLogin
             // 
-            txtUsusarioLogin.Location = new Point(49, 52);
-            txtUsusarioLogin.Name = "txtUsusarioLogin";
-            txtUsusarioLogin.Size = new Size(212, 23);
-            txtUsusarioLogin.TabIndex = 0;
+            lblLogin.AutoSize = true;
+            lblLogin.Location = new Point(57, 49);
+            lblLogin.Name = "lblLogin";
+            lblLogin.Size = new Size(40, 15);
+            lblLogin.TabIndex = 0;
+            lblLogin.Text = "Login:";
             // 
-            // txtSenhaLogin
+            // txtLogin
             // 
-            txtSenhaLogin.Location = new Point(49, 119);
-            txtSenhaLogin.Name = "txtSenhaLogin";
-            txtSenhaLogin.PasswordChar = '*';
-            txtSenhaLogin.Size = new Size(212, 23);
-            txtSenhaLogin.TabIndex = 1;
+            txtLogin.Location = new Point(57, 67);
+            txtLogin.Name = "txtLogin";
+            txtLogin.PlaceholderText = "Informe o seu login";
+            txtLogin.Size = new Size(194, 23);
+            txtLogin.TabIndex = 1;
             // 
-            // lblUsuario
+            // txtSenha
             // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.Location = new Point(53, 29);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(50, 15);
-            lblUsuario.TabIndex = 2;
-            lblUsuario.Text = "Usuario:";
+            txtSenha.Location = new Point(57, 142);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.PlaceholderText = "Informe a sua senha";
+            txtSenha.Size = new Size(194, 23);
+            txtSenha.TabIndex = 3;
             // 
             // lblSenha
             // 
             lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(53, 101);
+            lblSenha.Location = new Point(57, 124);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(42, 15);
-            lblSenha.TabIndex = 3;
+            lblSenha.TabIndex = 2;
             lblSenha.Text = "Senha:";
             // 
             // btnLogar
             // 
-            btnLogar.Location = new Point(118, 182);
+            btnLogar.Location = new Point(99, 202);
             btnLogar.Name = "btnLogar";
-            btnLogar.Size = new Size(75, 23);
+            btnLogar.Size = new Size(96, 38);
             btnLogar.TabIndex = 4;
             btnLogar.Text = "Logar";
             btnLogar.UseVisualStyleBackColor = true;
-            btnLogar.Click += btnCriar_Click;
+            btnLogar.Click += btnLogar_Click;
             // 
-            // Form1
+            // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(296, 273);
+            ClientSize = new Size(318, 450);
             Controls.Add(btnLogar);
+            Controls.Add(txtSenha);
             Controls.Add(lblSenha);
-            Controls.Add(lblUsuario);
-            Controls.Add(txtSenhaLogin);
-            Controls.Add(txtUsusarioLogin);
-            Name = "Form1";
-            Text = "Login";
+            Controls.Add(txtLogin);
+            Controls.Add(lblLogin);
+            Name = "FormLogin";
+            Text = "Formulário de login";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox txtUsusarioLogin;
-        private TextBox txtSenhaLogin;
-        private Label lblUsuario;
+        private Label lblLogin;
+        private TextBox txtLogin;
+        private TextBox txtSenha;
         private Label lblSenha;
         private Button btnLogar;
     }

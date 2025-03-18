@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WFAcesso
+namespace WFUsandoListagem
 {
     class Usuario
     {
-        public Usuario(int codigo, string login, string senha, DateTime dataCadastro, List<Usuario> listaUsuarios)
+        public Usuario(int? codigo, string? login, string? senha, DateTime? dataCadastro, List<Usuario>? listaUsuarios)
         {
             Codigo = codigo;
             Login = login;
@@ -17,6 +17,7 @@ namespace WFAcesso
             ListaUsuarios = listaUsuarios;
         }
 
+        public static List<Usuario> ListaUsuario = new List<Usuario>();
 
         public int? Codigo { get; set; }
         public string? Login { get; set; }
@@ -24,14 +25,9 @@ namespace WFAcesso
         public DateTime? DataCadastro { get; set; }
         public List<Usuario>? ListaUsuarios { get; set; }
 
-        public static List<Usuario> ListaUsuario = new List<Usuario>();
-
         public Usuario()
         {
-            
+
         }
-
     }
-
-
 }

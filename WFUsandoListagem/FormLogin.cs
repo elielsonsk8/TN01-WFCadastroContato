@@ -1,13 +1,14 @@
-namespace WFAcesso
+using Microsoft.VisualBasic.ApplicationServices;
+
+namespace WFUsandoListagem
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
             CarregarLista();
         }
-
         public void Sucesso(string mensagem = "")
         {
             MessageBox.Show(mensagem, "Sucesso",
@@ -22,36 +23,26 @@ namespace WFAcesso
 
         private void CarregarLista()
         {
+           
+            
             Usuario.ListaUsuario.Add(
                 new Usuario
                 {
-                    Codigo = 001,
-                    Login = "admin",
-                    Senha = "admin",
-                    DataCadastro = DateTime.Now,
-
-                }
-
-                );
-
-            Usuario.ListaUsuario.Add(
-                new Usuario
-                {
-                    Codigo = 002,
+                    Codigo = 1000,
                     Login = "user",
-                    Senha = "user",
-                    DataCadastro = DateTime.Now,
-
+                    Senha = "123456",
+                    DataCadastro = Convert.ToDateTime("10/01/2025 18:30"),
+                    
                 }
-
-                );
+            );
         }
 
-        private void btnCriar_Click(object sender, EventArgs e)
+        private void btnLogar_Click(object sender, EventArgs e)
         {
             Usuario user = new Usuario();
-            user.Login = txtUsusarioLogin.Text;
-            user.Senha = txtSenhaLogin.Text;
+            user.Login = txtLogin.Text;
+            user.Senha = txtSenha.Text;
+            
 
             if (string.IsNullOrEmpty(user.Login) || string.IsNullOrEmpty(user.Senha))
             {
@@ -59,27 +50,29 @@ namespace WFAcesso
                 return;
             }
 
-            bool loginValido = false; 
+            bool loginValido = false;
 
             foreach (var pessoa in Usuario.ListaUsuario)
             {
-                
+
                 if (pessoa == null)
                 {
-                    continue;  
+                    continue;
                 }
 
-                
-                if (user.Login == pessoa.Login && user.Senha == pessoa.Senha )
+
+                if (user.Login == pessoa.Login && user.Senha == pessoa.Senha)
                 {
                     Sucesso("Login efetuado com sucesso!");
                     loginValido = true;
-                    break;  
-                } 
+                    
+                    FormMain form = new FormMain();
+                    form.ShowDialog();
+                    return;
+                }
                     
             }
 
-            
             if (!loginValido)
             {
                 Erro("Erro ao efetuar login! Verifique suas credenciais.");
