@@ -1,6 +1,6 @@
-﻿namespace WFUsandoListagem
+﻿namespace WFCadastroProduto
 {
-    partial class FormMain
+    partial class FormMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             menuStrip1 = new MenuStrip();
             cadastrarToolStripMenuItem = new ToolStripMenuItem();
             listarToolStripMenuItem = new ToolStripMenuItem();
@@ -43,7 +43,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarToolStripMenuItem, listarToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(988, 24);
+            menuStrip1.Size = new Size(800, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -52,6 +52,7 @@
             cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             cadastrarToolStripMenuItem.Size = new Size(69, 20);
             cadastrarToolStripMenuItem.Text = "Cadastrar";
+            cadastrarToolStripMenuItem.Click += cadastrarToolStripMenuItem_Click;
             // 
             // listarToolStripMenuItem
             // 
@@ -73,20 +74,23 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 24);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(988, 426);
+            pictureBox1.Size = new Size(800, 426);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // FormMain
+            // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(988, 450);
+            ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "FormMain";
-            Text = "FormMain";
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FormMenu";
+            Text = "FormMenu";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

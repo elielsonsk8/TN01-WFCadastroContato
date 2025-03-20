@@ -22,11 +22,7 @@ namespace WFUsandoListagem
             Close();
         }
 
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormCadastro form = new FormCadastro();
-            form.ShowDialog();
-        }
+      
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
